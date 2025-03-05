@@ -1,0 +1,18 @@
+################Test Freelancer Matching API##################
+
+curl -X 'GET' 'http://127.0.0.1:8000/match_freelancers/?job_description=Python%20Developer' -H 'accept: application/json'
+#######################33Test AI Chatbot API######################
+
+curl -X 'GET' 'http://127.0.0.1:8000/chat/?query=What%20is%20CrewAI?' -H 'accept: application/json'
+
+
+#####################Test AI Interview Questions API###################3
+
+curl -X 'GET' 'http://127.0.0.1:8000/interview_questions/?role=Full-Stack%20Developer' -H 'accept: application/json'
+
+
+##########################Test Resume Analysis API#####################3
+
+curl -X 'POST' 'http://127.0.0.1:8000/analyze_resume/' -H 'Content-Type: application/json' -d '{"text": "Python, ML, React, TensorFlow"}'
+
+#############################33
