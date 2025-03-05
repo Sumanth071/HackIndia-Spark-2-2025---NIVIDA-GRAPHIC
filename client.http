@@ -1,0 +1,165 @@
+############################## cURL Command to Create a User########################33
+curl -X POST http://localhost:6060/api/users \
+     -H "Content-Type: application/json" \
+     -d '{
+           "name": "John Doe",
+           "email": "johndoe@example.com",
+           "role": "freelancer",
+           "skills": ["React", "Node.js"],
+           "portfolio": "https://johndoe.dev",
+           "hourlyRate": 50
+         }'
+
+#####################📌 2. Get All Users (GET)################
+curl -X GET http://localhost:6060/api/users
+
+####################📌 3. Get User by ID (GET)############33
+
+curl -X GET http://localhost:6060/api/users/67c6a0ac6e9166cc2c6962e7
+
+######################3 4. Update User (PUT)################33
+curl -X PUT http://localhost:6060/api/users/67c69c92ccc96962fd8bd973
+     -H "Content-Type: application/json" \
+     -d '{
+           "name": "John Updated",
+           "email": "johnupdated@example.com",
+           "role": "business",
+           "skills": ["Python", "Django"],
+           "portfolio": "https://johnupdated.dev",
+           "hourlyRate": 100
+         }'
+
+######################33333333
+curl -X PATCH "http://localhost:6060/api/users/67c6a0ac6e9166cc2c6962e7" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Bearer YOUR_SESSION_TOKEN" \
+     -d '{
+           "certifications": ["Full-Stack Web Development", "Machine Learning"]
+         }'
+
+########################## 5. Delete User (DELETE)###############
+
+curl -X DELETE http://localhost:6060/api/users/67c69c92ccc96962fd8bd973
+
+
+
+############################📌 1. Register a New User (POST)################333333
+curl -X POST http://localhost:6060/api/auth/register \
+     -H "Content-Type: application/json" \
+     -d '{
+           "name": "Sumanth Yadav",
+           "email": "sumanth@example.com",
+           "password": "Sumanth@123",
+           "role": "freelancer",
+           "skills": ["AI", "React", "Python"],
+           "portfolio": "https://sumanth-portfolio.com",
+           "hourlyRate": 50,
+           "company": "Spark AI Tech"
+         }'
+
+
+
+#############################Fetch All Jobs (GET /api/jobs)####################3
+curl -X GET http://localhost:6060/api/jobs -H "Content-Type: application/json"
+
+###############################3Fetch a Single Job by ID (GET /api/jobs/:id)################3
+curl -X GET http://localhost:6060/api/jobs/67c735b9d5c298dd8100a4f6
+-H "Content-Type: application/json"
+
+##########################3Update a Job (PUT /api/jobs/:id)#############33333333333
+curl -X PUT http://localhost:6060/api/jobs/67c735b9d5c298dd8100a4f6/
+-H "Content-Type: application/json" \
+-d '{
+  "title": "Updated node Developer Job",
+  "description": "Looking for an experienced React.js developer.",
+  "budget": 1200
+}'
+################################cURL Command to Create a Job##############################
+curl -X POST http://localhost:6060/api/jobs \
+-H "Content-Type: application/json" \
+-d '{
+  "title": "node devloper Needed",
+  "description": "Looking for a node developer to build a website.",
+  "skillsRequired": ["Node.js","html"],
+  "budget": 10800,
+  "deadline": "2025-04-08",
+  "engagementModel": "fixed",
+  "postedBy": "65e601f4c0dfe5a5b8b25d99"  
+}'
+
+######################Delete a Job (DELETE /api/jobs/:id)#############################33
+curl -X DELETE http://localhost:6060/api/jobs/67c735b9d5c298dd8100a4f6
+
+########333333333333333#333333333333333333333333333333333333333333333333333333333333333333333333
+curl -X GET http://localhost:5000/api/proposals/{proposalId}
+
+#########################GET a single proposal by ID#####################33
+
+
+
+
+
+
+
+####################GET all proposals####################3
+curl -X GET http://localhost:6060/api/proposals
+
+##########################################Create a New Proposal (POST /api/proposals)#####################3
+curl -X POST http://localhost:6060/api/proposals \
+     -H "Content-Type: application/json" \
+     -d '{
+           "jobId": "67c735b9d5c298dd8100a4f6",
+           "freelancerId": "67c6a0ac6e9166cc2c6962e7",
+           "coverLetter": "I am the best fit for this job.",
+           "bidAmount": 500,
+           "estimatedTimeline": "2 weeks"
+         }'
+
+
+
+####################################### Get All Proposals##################3333
+curl -X GET http://localhost:6060/api/proposals
+
+#############################
+curl -X GET http://localhost:6060/
+#############################################33Test User Endpoints (/api/users)
+
+curl -X POST http://localhost:6060/api/users \
+     -H "Content-Type: application/json" \
+     -d '{
+          "name": "John Doe",
+          "email": "john@example.com",
+          "password":"password",
+          "role": "admin"
+     }'
+
+
+##############################################333
+
+
+########################################## Create a Business User (POST Request)###########################
+
+curl -X POST http://localhost:6060/api/users/register \
+     -H "Content-Type: application/json" \
+     -d '{
+           "name": "Tech Corp",
+           "email": "business@example.com",
+           "password": "securepassword",
+           "role": "business",
+           "companyName": "Tech Corp Ltd",
+           "industry": "Software",
+           "description": "Leading tech solutions company",
+           "website": "https://techcorp.com",
+           "hiringNeeds": "Looking for software engineers"
+         }'
+
+
+
+
+
+
+
+
+
+
+

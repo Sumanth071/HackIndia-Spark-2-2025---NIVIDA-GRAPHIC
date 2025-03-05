@@ -1,0 +1,67 @@
+################################👥 Get All Users###################3
+curl -X GET http://localhost:6060/api/users \
+     -H "Content-Type: application/json"
+
+################################Get User by ID#####################3
+curl -X GET http://localhost:6060/api/users/67c6a0ac6e9166cc2c6962e7
+     -H "Content-Type: application/json"
+
+######################### Update User##############################333
+curl -X PUT http://localhost:6060/api/users/67c6a0ac6e9166cc2c6962e7
+     -H "Content-Type: application/json" \
+     -d '{
+           "name": "Updated Sumanth",
+           "location": "Updated India"
+         }'
+
+######################################3❌ Delete User######################
+curl -X DELETE http://localhost:6060/api/users/USER_ID_HERE \
+     -H "Content-Type: application/json"
+
+
+####################################✅ Admin Approve User###################333
+
+########################################3Freelancer Signup#############3333333
+
+curl -X POST http://localhost:6060/api/auth/register \
+     -H "Content-Type: application/json" \
+     -d '{
+           "name": "sandeep",
+           "email": "sandeep@gmail.com",
+           "password": "password",
+           "role": "admin"
+           "skills": ["React", "Node.js"],
+           "experience": 5,
+           "portfolio": "https://sumanth.dev",
+           "hourlyRate": 50,
+           "location": "India"
+         }'
+#################################### Business Signup########################
+curl -X POST http://localhost:6060/api/auth/register \
+     -H "Content-Type: application/json" \
+     -d '{
+           "name": "Tech Corp",
+           "email": "hr@techcorp.com",
+           "password": "123456789",
+           "role": "business",
+           "companyName": "Tech Corp",
+           "industry": "Software Development",
+           "description": "We build software solutions.",
+           "website": "https://techcorp.com",
+           "hiringNeeds": "Looking for React developers."
+         }'
+
+############################Login#######################################33
+curl -X POST http://localhost:6060/api/auth/login \
+     -H "Content-Type: application/json" \
+     -d '{
+           "email": "ksumanthyadav120@gmail.com",
+           "password": "password12345"
+         }'
+
+########################3 Approve User (Admin Only)#####################33
+curl -X POST http://localhost:6060/api/admin/approve \
+     -H "Content-Type: application/json" \
+     -d '{
+           "userId": "67c6a0ac6e9166cc2c6962e7"
+         }'
