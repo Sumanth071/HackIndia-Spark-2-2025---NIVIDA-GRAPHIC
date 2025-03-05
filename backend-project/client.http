@@ -2,11 +2,11 @@
 curl -X POST http://localhost:6060/api/users \
      -H "Content-Type: application/json" \
      -d '{
-           "name": "John Doe",
-           "email": "johndoe@example.com",
+           "name": "Sumanth",
+           "email": "ksumanth@gmail.com",
            "role": "freelancer",
            "skills": ["React", "Node.js"],
-           "portfolio": "https://johndoe.dev",
+           "portfolio": "https://Sumanth071.dev",
            "hourlyRate": 50
          }'
 
@@ -18,7 +18,7 @@ curl -X GET http://localhost:6060/api/users
 curl -X GET http://localhost:6060/api/users/67c6a0ac6e9166cc2c6962e7
 
 ######################3 4. Update User (PUT)################33
-curl -X PUT http://localhost:6060/api/users/67c69c92ccc96962fd8bd973
+curl -X PUT http://localhost:6060/api/users/67c6a0ac6e9166cc2c6962e7
      -H "Content-Type: application/json" \
      -d '{
            "name": "John Updated",
@@ -30,7 +30,7 @@ curl -X PUT http://localhost:6060/api/users/67c69c92ccc96962fd8bd973
          }'
 
 ######################33333333
-curl -X PATCH "http://localhost:6060/api/users/67c6a0ac6e9166cc2c6962e7" \
+curl -X PATCH "http://localhost:6060/api/users/667c6a0ac6e9166cc2c6962e7" \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer YOUR_SESSION_TOKEN" \
      -d '{
@@ -63,7 +63,7 @@ curl -X POST http://localhost:6060/api/auth/register \
 curl -X GET http://localhost:6060/api/jobs -H "Content-Type: application/json"
 
 ###############################3Fetch a Single Job by ID (GET /api/jobs/:id)################3
-curl -X GET http://localhost:6060/api/jobs/67c735b9d5c298dd8100a4f6
+curl -X GET http://localhost:6060/api/jobs/67c6a0ac6e9166cc2c6962e7
 -H "Content-Type: application/json"
 
 ##########################3Update a Job (PUT /api/jobs/:id)#############33333333333
